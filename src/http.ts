@@ -19,7 +19,7 @@ async function main() {
   app.get("/sse", async (req, res) => {
     // Generate a unique connection ID (UUID format)
     const sessionId = req.query.sessionId as string ||
-                     `${Math.random().toString(36).substring(2, 15)}-${Date.now().toString(36)}`;
+      `${Math.random().toString(36).substring(2, 15)}-${Date.now().toString(36)}`;
 
     try {
       // Create a new SSE transport
