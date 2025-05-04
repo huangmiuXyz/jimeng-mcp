@@ -82,7 +82,7 @@ async function main() {
 
   // Start the server
   app.listen(port, () => {
-    console.error(`Hello World MCP Server running on http://localhost:${port}`);
+    console.error(`JiMeng MCP Server running on http://localhost:${port}`);
     console.error(`- Connect to /sse for server-sent events`);
     console.error(`- Send messages to /messages endpoint`);
   });

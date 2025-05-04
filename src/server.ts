@@ -6,13 +6,13 @@ import { z } from "zod";
 import { generateImage } from "./api.js";
 
 /**
- * Creates and configures a Hello World MCP server
+ * Creates and configures a JiMeng MCP server
  * with one resource, one prompt, and one tool
  */
 export function createServer() {
   // Create an MCP server
   const server = new McpServer({
-    name: "hello-world",
+    name: "jimeng",
     version: "1.0.0",
     // Debug handler for incoming method calls
     debug: true,

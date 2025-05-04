@@ -31,7 +31,7 @@ async function main() {
     // Connect the server to the transport
     await server.connect(transport);
 
-    console.error("Hello World MCP Server running on stdio");
+    console.error("JiMeng MCP Server running on stdio");
 
   } catch (error) {
     console.error('启动服务器时出错:', error);
