@@ -1,23 +1,23 @@
 {
   "name": "jimeng",
-  "version": "1.1.1",
+  "version": "1.1.6",
   "description": "MCP服务器项目，集成即梦AI图像生成",
   "keywords": [
-    "lobehub",
-    "model-context-protocol",
-    "sdk"
+    "jimeng",
+    "jimeng-mcp",
+    "mcp-server"
   ],
-  "homepage": "https://github.com/lobehub/mcp-hello-world",
+  "homepage": "https://github.com/huangmiuXyz/jimeng-mcp",
   "bugs": {
-    "url": "https://github.com/lobehub/mcp-hello-world/issues/new"
+    "url": "https://github.com/huangmiuXyz/jimeng-mcp/issues/new"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lobehub/mcp-hello-world.git"
+    "url": "https://github.com/huangmiuXyz/jimeng-mcp.git"
   },
   "license": "MIT",
   "type": "module",
-  "author": "LobeHub <i@lobehub.com>",
+  "author": "huangmiuXyz",
   "bin": {
     "jimeng": "./build/stdio.js"
   },
