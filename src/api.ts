@@ -134,6 +134,7 @@ class JimengApiClient {
         Version: this.API_VERSION,
         data: requestParams,
         method: 'POST',
+        timeout: 1800000 
       }, {
         serviceName: this.API_SERVICE,
         defaultVersion: this.API_VERSION
