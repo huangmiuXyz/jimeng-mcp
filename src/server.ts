@@ -17,10 +17,9 @@ export function createServer() {
     // Debug handler for incoming method calls
     debug: true,
   });
-
-  // 添加即梦AI图像生成工具
   server.tool(
     "generateImage",
+    "调用即梦AI生成图像",
     {
       prompt: z.string().describe("生成图像的文本描述"),
       req_key: z.string().default("jimeng_high_aes_general_v21_L").describe("取固定值: jimeng_high_aes_general_v21_L"),
