@@ -1,0 +1,31 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - accessKeyId
+      - secretKey
+    properties:
+      accessKeyId:
+        type: string
+        description: VolcEngine Access Key ID
+      secretKey:
+        type: string
+        description: VolcEngine Secret Access Key
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['build/stdio.js'],
+      env: {
+        VOLCENGINE_ACCESS_KEY: config.accessKeyId,
+        VOLCENGINE_SECRET_KEY: config.secretKey
+      }
+    })
+  exampleConfig:
+    accessKeyId: AKIAEXAMPLEKEY12345
+    secretKey: exampleSecretKey67890
