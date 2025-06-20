@@ -139,7 +139,6 @@ class JimengApiClient {
         serviceName: this.API_SERVICE,
         defaultVersion: this.API_VERSION
       })
-      console.log(response)
       return (response as unknown as ImageResponse).data.image_urls || ''
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
