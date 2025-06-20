@@ -149,11 +149,11 @@ class JimengApiClient {
     }
   }
 }
-
+const apiClient = new JimengApiClient();
 
 // 导出函数，保持对外接口不变
 export const generateImage = (params: ImageGenerationParams) => {
-  const apiClient = new JimengApiClient();
+
   return apiClient.generateImage(params);
 };
 
