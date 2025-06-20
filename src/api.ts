@@ -134,11 +134,14 @@ class JimengApiClient {
         Version: this.API_VERSION,
         data: requestParams,
         method: 'POST',
-        timeout: 1800000 
+        timeout: 1800000
       }, {
         serviceName: this.API_SERVICE,
         defaultVersion: this.API_VERSION
       })
+      if (response.ResponseMetadata?.Error) {
+        throw new Error(`${response.ResponseMetadata.Error.Code}: ${response.ResponseMetadata.Error.Message}`)
+      }
       return (response as unknown as ImageResponse).data.image_urls || ''
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
